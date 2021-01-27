@@ -1,0 +1,39 @@
+<nav>
+    <div class="logo">Vimal</div>
+    <ul class="nav-links" [ngClass]="status ? 'nav-active':' '" #list>
+        <li (click)="dothis()"><a href="#">Product</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Login</a></li>
+    </ul>
+    <div class="burger" (click)="clickEvent()"  
+    [ngClass]="status ? 'toggle':' '">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
+<!-- 
+<script>
+    const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".nav-links");
+        const navLinks = document.querySelectorAll(".nav-links li");
+
+        burger.addEventListener("click", () => {
+            //Toggle Nav
+            nav.classList.toggle("nav-active");
+
+            //Animate Links
+            navLinks.forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = "";
+                } else {
+                    link.style.animation = `navLinkFade 0.3s ease forwards ${index / 7 +
+                        0.2}s`;
+
+                }
+            });
+            //Burger Animation
+            burger.classList.toggle("toggle");
+        });
+</script> -->
